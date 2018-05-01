@@ -1,0 +1,21 @@
+{
+  "name": "host-test-front-end",
+  "description": "Prova criada para avaliar os candidatos de frontEnd",
+  "main": "",
+  "authors": [
+    "HEBER-PC\\heber <heber.navegante@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "^2.3.4",
+    "jQuery.dotdotdot": "jquery.dotdotdot#^3.2.2"
+  }
+}
