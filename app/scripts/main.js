@@ -15,9 +15,9 @@ function setProductsWidth() {
     var $products = $(".container-carousel .product");
 
     for (let i = 0; i < $products.length; i++) {
-      const $product = $($products[i]);
+      var $product = $($products[i]);
 
-      $product.attr('style', 'width: ' +  $(window).width() + "px !important")
+      $product.attr('style', 'width: ' +  $(window).width() + "px !important");
     }
   }
 }
@@ -79,11 +79,11 @@ function sideBarTemplate(items) {
   var result = '';
 
   for (let i = 0; i < items.length; i++) {
-    const item = items[i];
+    var item = items[i];
 
     result +=
       '<div class="item">' +
-      '<div class="category">' + item.category + '</div>' +
+      '<div class="category">'+ (item.action ? '<a href="'+ item.action +'">'+ item.category +'</a>' : item.category) + '</div>' +
       menusTemplate(item.menus) +
       '</div>';
   }
@@ -95,7 +95,7 @@ function menusTemplate(items) {
   var result = '';
 
   for (let i = 0; i < items.length; i++) {
-    const item = items[i];
+    var item = items[i];
 
     result +=
       '<div class="menus">' +
@@ -111,7 +111,7 @@ function menuItems(items) {
   var result = '';
 
   for (let i = 0; i < items.length; i++) {
-    const item = items[i];
+    var item = items[i];
 
     result += '<a href="' + item.action + '"><div class="menu-item">' + item.name + ' (' + item.count + ')</div></a>';
   }
@@ -136,7 +136,7 @@ function initCarousel() {
   var $images = $carousel.find(".product .description .image");
 
   for (let i = 0; i < $images.length; i++) {
-    const $element = $($images[i]);
+    var $element = $($images[i]);
 
     $element.css({
       "background-image": "url(assets/images/tv.jpg)"

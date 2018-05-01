@@ -340,6 +340,11 @@ span.green {
           font-weight: bolder;        
         }
 
+        .body .products-container .side-menu .item .category a {
+          color: #004f27;
+          text-decoration: none;
+        }
+
         .body .products-container .side-menu .item:first-child .category {
           border-top: none;
         }
